@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/FontGilroy/Gilroy-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../public/fonts/FontGilroy/Gilroy-Bold.otf");
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

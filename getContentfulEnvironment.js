@@ -1,0 +1,13 @@
+//This file provides access to Contentful's Space and Content Models for typescript's types auto-generating.
+require('dotenv').config()
+const contentfulManagement = require('contentful-management')
+
+module.exports = function () {
+    const contentfulClient = contentfulManagement.createClient({
+        accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN,
+    })
+
+    return contentfulClient
+        .getSpace(process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID)
+        .then((space) => space.getEnvironment(process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT))
+}
